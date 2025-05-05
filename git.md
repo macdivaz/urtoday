@@ -22,3 +22,4 @@ git push -u origin main
 git remote add origin https://github.com/macdivaz/KTJ.git
 git branch -M main
 git push -u origin main
+-u 是 --set-upstream 的縮寫，表示將本地分支與遠端分支建立關聯。​
