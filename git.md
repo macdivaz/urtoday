@@ -19,7 +19,7 @@ git remote add origin https://github.com/macdivaz/KTJ.git
 git push -u origin main
 ---
 …or push an existing repository from the command line
-git remote add origin https://github.com/macdivaz/KTJ.git
+git remote add origin https://github.com/macdivaz/urtoday.git
 git branch -M main
 git push -u origin main
 -u 是 --set-upstream 的縮寫，表示將本地分支與遠端分支建立關聯。​
