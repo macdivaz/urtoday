@@ -14,12 +14,12 @@ echo "# KTJ" >> README.md
 git init
 git add README.md
 git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/macdivaz/KTJ.git
+git branch -M main 分支管理 重新命名 馨的分支名
+git remote add origin https://github.com/macdivaz/urtoday.git 遠端 新增 遠端儲存庫名稱 遠端儲存庫網址
 git push -u origin main
 ---
 …or push an existing repository from the command line
 git remote add origin https://github.com/macdivaz/urtoday.git
 git branch -M main
-git push -u origin main
+git push -u origin main 推送 建立關聯 遠端名稱 本地名稱
 -u 是 --set-upstream 的縮寫，表示將本地分支與遠端分支建立關聯。​
