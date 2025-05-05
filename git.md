@@ -23,3 +23,8 @@ git remote add origin https://github.com/macdivaz/urtoday.git
 git branch -M main
 git push -u origin main 推送 建立關聯 遠端名稱 本地名稱
 -u 是 --set-upstream 的縮寫，表示將本地分支與遠端分支建立關聯。​
+
+--
+按下 Esc 鍵，確保您處於正常模式。
+輸入 :wq，然後按下 Enter 鍵，這將會儲存並退出編輯器。
+或者，您也可以按下 Esc，然後按下 Shift + Z 兩次（即 ZZ），這同樣會儲存並退出。
