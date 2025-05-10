@@ -28,3 +28,5 @@ git push -u origin main 推送 建立關聯 遠端名稱 本地名稱
 按下 Esc 鍵，確保您處於正常模式。
 輸入 :wq，然後按下 Enter 鍵，這將會儲存並退出編輯器。
 或者，您也可以按下 Esc，然後按下 Shift + Z 兩次（即 ZZ），這同樣會儲存並退出。
+
+--git init --bare 建立共用儲存庫
