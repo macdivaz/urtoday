@@ -14,9 +14,10 @@ echo "# KTJ" >> README.md
 git init
 git add README.md
 git commit -m "first commit"
-git branch -M main 分支管理 重新命名 馨的分支名
+git branch -M main 分支管理 重新命名 新的分支名
 git remote add origin https://github.com/macdivaz/urtoday.git 遠端 新增 遠端儲存庫名稱 遠端儲存庫網址
 git push -u origin main
+git mv test unit-test 檔案/目錄改名字
 ---
 …or push an existing repository from the command line
 git remote add origin https://github.com/macdivaz/urtoday.git
