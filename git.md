@@ -4,13 +4,17 @@ git --version 查看版本
 git config --global user.name "divazchen" 設定姓名
 git config --global user.email "macdivas@gmail.com" 設定信箱
 git init 初始化，才能變成git資料庫
-git add git.md / git add *.md / git add . 新增索引
+
 git log / git log --oneline 查看log
 
 clear 清除螢幕
 
 git remote add origin https://github.com/macdivaz/urtoday.git 遠端 新增 遠端儲存庫名稱 遠端儲存庫網址
 git remote add origin https://github.com/macdivaz/urtoday.git
+
+git add git.md / git add *.md / git add . 新增索引
+git commit -m ""
+git push
 
 git push -u origin main 推送 建立關聯 遠端名稱 本地名稱
 git push -u origin main
