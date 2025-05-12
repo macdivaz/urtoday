@@ -44,7 +44,7 @@ git mv test unit-test 檔案/目錄改名字
 或者，您也可以按下 Esc，然後按下 Shift + Z 兩次（即 ZZ），這同樣會儲存並退出。
 
 --learn git in 30 days 保哥學git
-https://github.com/doggy8088/Learn-Git-in-30-days/blob/master/zh-tw/01.md
+https://github.com/doggy808/Learn-Git-in-30-days/blob/master/zh-tw/01.md
 Day1 第 01 天：認識 Git 版本控管
 Day2 第 02 天：在 Windows 平台必裝的三套 Git 工具
 Day3 第 03 天：建立儲存庫
@@ -67,3 +67,16 @@ git add -u 則可以僅將「更新」或「刪除」的檔案變更寫入到「
 只想刪除索引檔中的該檔，又要保留工作目錄下的實體檔案 
 git rm --cached a.txt
 git ls-files 查看目前索引內有哪些檔案
+
+Day8 第 08 天：關於分支的基本觀念與使用方式
+git branch [branch_name]/git branch branch-1 建立分支branch-1
+git branch checkout -b branch-2 建立branch-2且切換到此分支
+git checkout [branch_name] 切換到此分支
+git branch -D [branch_name] 刪除分支
+小結
+git branch 查詢現在有的分支
+git branch [branch_name] 新增分支
+git checkout -b [branch_name] 建立分支且跳到該分支
+git checkout [branch_name] 跳到該分支
+git branch -d [branch_name] 刪除該分支
+git log
