@@ -35,6 +35,15 @@ git add README.md
 git commit -m "first commit"
 git mv test unit-test 檔案/目錄改名字
 
+本地分支尚未設定對應的遠端追蹤分支，因此 Git 無法自動判斷應該從哪個遠端分支拉取更新。
+git branch --set-upstream-to=origin/main main
+
+如果您尚未推送本地分支到遠端，您可以在首次推送時同時設定追蹤關係
+git push -u origin main
+
+查看本地分支的追蹤狀態：
+git branch -vv
+
 ---
 …or push an existing repository from the command line
 
