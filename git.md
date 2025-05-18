@@ -35,6 +35,15 @@ git add README.md
 git commit -m "first commit"
 git mv test unit-test 檔案/目錄改名字
 
+本地分支尚未設定對應的遠端追蹤分支，因此 Git 無法自動判斷應該從哪個遠端分支拉取更新。
+git branch --set-upstream-to=origin/main main
+
+如果您尚未推送本地分支到遠端，您可以在首次推送時同時設定追蹤關係
+git push -u origin main
+
+查看本地分支的追蹤狀態：
+git branch -vv
+
 ---
 …or push an existing repository from the command line
 
@@ -44,7 +53,8 @@ git mv test unit-test 檔案/目錄改名字
 或者，您也可以按下 Esc，然後按下 Shift + Z 兩次（即 ZZ），這同樣會儲存並退出。
 
 --learn git in 30 days 保哥學git
-https://github.com/doggy808/Learn-Git-in-30-days/blob/master/zh-tw/01.md
+https://github.com/doggy8088/Learn-Git-in-30-days
+https://github.com/doggy8088/Learn-Git-in-30-days/blob/master/zh-tw/01.md
 Day1 第 01 天：認識 Git 版本控管
 Day2 第 02 天：在 Windows 平台必裝的三套 Git 工具
 Day3 第 03 天：建立儲存庫
