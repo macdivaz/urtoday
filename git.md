@@ -79,6 +79,9 @@ git rm --cached a.txt
 git ls-files 查看目前索引內有哪些檔案
 
 Day8 第 08 天：關於分支的基本觀念與使用方式
+echo. > a.txt 建立 a.txt 檔案
+echo 1 > a.txt 輸入文字到 a.txt檔案
+
 git branch [branch_name]/git branch branch-1 建立分支branch-1
 git branch checkout -b branch-2 建立branch-2且切換到此分支
 git checkout [branch_name] 切換到此分支
@@ -92,3 +95,69 @@ git branch -d [branch_name] 刪除該分支
 git log
 
 Day9 第 09 天：比對檔案與版本差異
+git diff
+commit graph 存在的tree object
+index, git add時 tree已被建立
+dirtectory 工作目錄
+四種基本比較方式
+git diff 工作目錄&索引
+gid diff commit 工作目錄&指定的commit物件裡tree物件
+git diff --cached commit 當前索引狀態&指定commit物件裡的tree物件
+-- git diff --cached HEAD
+-- git diff --cached == git diff --staged
+-- git diff --cached == git diff --cached HEAD
+git diff commit1 commit2
+小結
+git diff                 => 工作目錄 vs 索引
+git diff HEAD            => 工作目錄 vs HEAD
+git diff --cached HEAD   => 索引     vs HEAD
+git diff --cached        => 索引     vs HEAD
+git diff HEAD^ HEAD	     => HEAD^   vs HEAD
+整理
+git log
+git diff
+git diff HEAD
+git diff --cached
+git diff --staged
+git diff HEAD^ HEAD
+
+Day 10 第 10 天：認識 Git 物件的絕對名稱
+git cat-file -p commitid 查看commit物件,commit id 不得少於4碼
+git log --pretty=oneline 簡短log 有物件絕對名稱的簡短語法
+git log --pretty=oneline --abbrev-commit 僅輸出部分的絕對名稱
+
+Day11 第 11 天：認識 Git 物件的一般參照與符號參照
+dir .git\refs\heads 查看本地分支的參照名稱
+type .git\refs\heads\newbranch1 打開指定路徑下的目錄
+git cat-file -p 0bd0(Commit ID)/Branch Name
+git show 0bd0(Commit ID)
+
+本地分支：.git/refs/heads/
+遠端分支：.git/refs/remotes/
+標　　籤：.git/refs/tags/
+
+ref/heads/branch name;commit ID >> git cat-file -p 
+
+.git/<參照簡稱>
+.git/refs/<參照簡稱>
+.git/refs/tags/<參照簡稱;標籤名稱>
+.git/refs/heads/<參照簡稱;本地分支名稱>
+.git/refs/remotes/<參照簡稱>
+.git/refs/remotes/<參照簡稱;遠端分支名稱>/HEAD
+
+.git/f2e --> 找不到此檔案
+.git/refs/f2e --> 找不到此檔案
+.git/refs/tags/f2e --> 找不到此檔案
+.git/refs/heads/f2e --> 找到了參照名稱，以下就不繼續搜尋
+.git/refs/remotes/f2e
+.git/refs/remotes/f2e/HEAD
+
+head
+orig_head
+fetch_head
+merge_head
+
+git update-ref 就可以自由建立「一般參照」
+git update-ref Name ObjectID
+git symbolic-ref
+git show-ref
